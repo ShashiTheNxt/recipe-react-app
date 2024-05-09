@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+"Food Recipe App" utilizes React and Edamam API to search for recipes based on user input. Users can explore a variety of recipes, filtering by ingredients, calories, and health preferences. The app provides a user-friendly interface for discovering diverse culinary options.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+1. **Imports**: The code imports `React` and `useState` from the React library, as well as a component named `Products` from './Products'.
 
-In the project directory, you can run:
+2. **Functional Component**: `App` is a functional component defined using arrow function syntax.
 
-### `npm start`
+3. **State Declaration**: Two state variables, `search` and `data`, are declared using the `useState` hook. `search` holds the value of the user's search query, and `data` holds the fetched recipe data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **API Credentials**: The API credentials (`YOUR_APP_ID` and `YOUR_APP_KEY`) for the Edamam API are declared. These will be used to authenticate requests to the API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. **Submit Handler**: The `submitHandler` function is defined to handle form submission. It prevents the default form submission behavior, constructs the API URL with the search query and API credentials, and fetches data from the Edamam API using `fetch`. Once the data is retrieved, it is converted to JSON format and stored in the `data` state variable.
 
-### `npm test`
+6. **Return JSX**: The `App` component returns JSX, which represents the UI of the application. It consists of a form with an input field for the user to enter their search query. On submission, the `submitHandler` function is called. If `data` contains more than one item, the `Products` component is rendered with the fetched data; otherwise, it renders `null`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. **Export**: Finally, the `App` component is exported as the default export of the module.
