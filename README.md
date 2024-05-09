@@ -1,4 +1,6 @@
 "Food Recipe App" utilizes React and Edamam API to search for recipes based on user input. Users can explore a variety of recipes, filtering by ingredients, calories, and health preferences. The app provides a user-friendly interface for discovering diverse culinary options.
+access "https://recipe-react-app-45200.web.app"
+
 
 
 1. **Imports**: The code imports `React` and `useState` from the React library, as well as a component named `Products` from './Products'.
